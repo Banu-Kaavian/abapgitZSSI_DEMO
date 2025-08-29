@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Custom Accurals Function Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_ACCRUALSTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_ACCRUALS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_ACCRUAL_ITEM_DATA_EXTRACT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Accurals Item Data Extract</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_REF_KEY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ACE_OBJ_ID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_ACCURUAL_ITEM_T</PARAMETER>
+       <TYP>ZACESOBJ_ITEM_PER_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_REF_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Identifier of the Accrual Object</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_ACCURUAL_ITEM_T</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table for ACESOBJ_ITEM</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_DATA_TABLE_DYMANIC_FORM</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Data Table for Dynamic Form</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_TABLE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZTEST_DTY_TT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_SERIAL_NO</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>NUM16</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_TABLE</PARAMETER>
+       <TYP>ZTEST_DTY_TT</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>RETURN_TAB</PARAMETER>
+       <TYP>BAPIRET2_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_TABLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data Type for Dynamic Form Table Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_SERIAL_NO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Numeric field: Length 16</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_TABLE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data Type for Dynamic Form Table Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_PROPOSAL_DATE_CALCULATOR</FUNCNAME>
+     <SHORT_TEXT>Date Calculator for Proposal Run</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_START_DATE</PARAMETER>
+       <TYP>ACE_LIFE_START_DATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_END_DATE</PARAMETER>
+       <TYP>ACE_LIFE_END_DATE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_DATE</PARAMETER>
+       <TYP>ACR_T_FDATE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_START_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Start of Life of an Accrual Subobject or Item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_END_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>End of Life of an Accrual Subobject or Item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table type: date</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
